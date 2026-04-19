@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কবি জি এম খালিদ | পোর্টফোলিও</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS অংশ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: #e67e22; }
+
+        nav ul { display: flex; list-style: none; }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: #e67e22; }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+
+        section { padding: 5rem 2rem; max-width: 1100px; margin: auto; text-align: center; }
+
+        h2 { margin-bottom: 2rem; position: relative; padding-bottom: 10px; }
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #e67e22;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* কবিতা গ্যালারি ডিজাইন */
+        .poem-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .poem-card {
+            flex: 0 0 350px;
+            background: #fff;
+            padding: 40px;
+            border-left: 8px solid #e67e22;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-radius: 15px;
+            text-align: left;
+            scroll-snap-align: start;
+        }
+
+        .poem-card h3 { color: #2c3e50; margin-bottom: 15px; }
+        .poem-card p { font-style: italic; color: #555; white-space: pre-line; }
+
+        .poem-slider::-webkit-scrollbar { height: 8px; }
+        .poem-slider::-webkit-scrollbar-thumb { background: #e67e22; border-radius: 10px; }
+
+        /* স্কিল সেকশন */
+        .skills span {
+            display: inline-block;
+            background: #2c3e50;
+            color: #fff;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .card i { font-size: 2.5rem; color: #e67e22; margin-bottom: 15px; }
+
+        .btn {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn:hover { background: #d35400; }
+
+        footer { background: #2c3e50; color: #fff; padding: 3rem; text-align: center; }
+        .socials { margin-top: 20px; }
+        .socials a { color: #fff; font-size: 1.5rem; margin: 0 10px; transition: 0.3s; }
+        .socials a:hover { color: #e67e22; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .poem-card { flex: 0 0 280px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">G.M. Khalid</div>
+            <ul>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#about">পরিচিতি</a></li>
+                <li><a href="http://127.0.0.1:5500/khalid/contact.html">কবিতা</a></li>
+                <li><a href="#literary">অর্জন</a></li>
+                <li><a href="#tech">টেক</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>আমি কবি জি এম খালিদ</h1>
+            <p>কবি ও সংগঠক | সিএসটি শিক্ষার্থী (খুলনা পলিটেকনিক)</p>
+            <a href="http://127.0.0.1:5500/khalid/about.html" class="btn">বিস্তারিত</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>সংক্ষিপ্ত পরিচিতি</h2>
+        <p>আমি খুলনা জেলার ডুমুরিয়া উপজেলায় জন্মগ্রহণ করেছি। ছোটবেলা থেকেই সাহিত্যের প্রতি প্রবল ঝোঁক ছিল। বর্তমানে খুলনা পলিটেকনিক ইনস্টিটিউটে কম্পিউটার সায়েন্স অ্যান্ড টেকনোলজি নিয়ে পড়াশোনার পাশাপাশি <strong>সোনার বাংলা সাহিত্য পরিষদ খুলনা</strong>-র মাধ্যমে সাহিত্য চর্চা ও প্রসারে কাজ করছি।</p>
+    </section>
+
+    <section id="poems">
+        <h2>সেরা কবিতা গ্যালারি</h2>
+        <div class="poem-slider">
+            <div class="poem-card">
+                <h3>অপেক্ষার শেষ প্রহর</h3>
+                <p>নিস্তব্ধ রাতে জোনাকিরা জ্বলে,
+                অপেক্ষার প্রহর শেষ হবে বলে।
+                হৃদয়ের কোণে জমে থাকা আশা,
+                খুঁজে পায় আজও নতুন ভালোবাসা।</p>
+            </div>
+            <div class="poem-card">
+                <h3>সূর্য কিরণ</h3>
+                <p>নতুন ভোরে সূর্যের হাসি,
+                সব আঁধার যাক আজ ভাসি।
+                আলোর পথ ধরে চলি অবিরাম,
+                সাহিত্যের রঙে সাজাই নিজ ধাম।</p>
+            </div>
+            <div class="poem-card">
+                <h3>নীরব কষ্ট</h3>
+                <p>বলিনি কথা, জমিয়েছি মেঘ,
+                বুকের ভেতর নিদারুণ বেগ।
+                শব্দরা আজ করেছে আড়ি,
+                স্মৃতির পাতায় দিয়েছি পাড়ি।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="literary">
+        <h2>সাহিত্য জীবন ও অর্জন</h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-pen-nib"></i>
+                <h3>প্রকাশিত গ্রন্থ</h3>
+                <p>অপেক্ষার শেষ প্রহর, সূর্য কিরণ, নীরব কষ্ট, আলোর কাব্য,সেরা ৫০০ কবির কবিতা,শেখ রাসেল, নীল আকাশ| যৌথ কাব্যগ্রন্থ প্রকাশিত হয়েছে।</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-trophy"></i>
+                <h3>পুরস্কার ও সম্মাননা</h3>
+                <p>গুনিজন সংবর্ধনা -২০২২ ইং(সেরা কবি সম্মাননা ক্রেস্ট ও সনদ এবং ম্যাডেল)। কবি এবং গীতিকার ক্রেস্ট পেয়েছেন ২০২৩ সালে।২০২৩ সালে সেরা লেখক হিসেবে সম্মাননা ক্রেস্ট পেয়েছেন।প্রথম যৌথ কাব্য গ্রহন্ত অপেক্ষার শেষ প্রহর থেকে ২০২৪ সালে সম্মাননা ক্রেস্ট।২০২৪ এর সেরা কবি এবং লেখক হিসেবে ক্রেস্ট।২০২৪ সালে সেরা কবিতার বাঁধাই করা সনদ।২০২৫ সালে সেরা কবিতার বাঁধাই করা সনদ।২০২৬ সালে বেস্ট রাইটার এওয়ার্ড।</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech">
+        <h2>টেকনিক্যাল স্কিল</h2>
+        <div class="skills">
+            <span>PHP Laravel</span>
+            <span>React.js</span>
+            <span>Computer Networking</span>
+            <span>Hardware Management</span>
+            <span>Web Development</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; ২০২৬ | কবি জি এম খালিদ। সর্বস্বত্ব সংরক্ষিত।</p>
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
